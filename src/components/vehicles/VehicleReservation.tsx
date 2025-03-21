@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -18,7 +17,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 
-// Création du schéma de validation pour le formulaire
 const formSchema = z.object({
   vehicle: z.string({
     required_error: "Veuillez sélectionner un véhicule",
@@ -42,7 +40,6 @@ const formSchema = z.object({
   insurance: z.string().optional(),
 });
 
-// Données des véhicules
 const vehiclesData = [
   { id: 'corolla', name: 'Toyota Corolla', pricePerDay: 35000 },
   { id: 'accent', name: 'Hyundai Accent', pricePerDay: 32000 },
@@ -56,7 +53,6 @@ const VehicleReservation = () => {
   const [showSummary, setShowSummary] = useState(false);
   const [reservationData, setReservationData] = useState<any>(null);
   
-  // Initialisation du formulaire avec React Hook Form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -65,14 +61,12 @@ const VehicleReservation = () => {
     },
   });
 
-  // Calcul du nombre de jours entre deux dates
   const getDaysDifference = (startDate: Date, endDate: Date) => {
     const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays || 1; // Minimum 1 jour
+    return diffDays || 1;
   };
 
-  // Calcul du prix total
   const calculateTotalPrice = (data: z.infer<typeof formSchema>) => {
     const selectedVehicle = vehiclesData.find(v => v.id === data.vehicle);
     if (!selectedVehicle || !data.startDate || !data.endDate) return 0;
@@ -82,20 +76,17 @@ const VehicleReservation = () => {
     
     let totalPrice = basePrice * days;
     
-    // Ajouter le prix du chauffeur si l'option est sélectionnée
     if (data.withDriver === "oui") {
-      totalPrice += 15000 * days; // 15 000 FCFA par jour pour le chauffeur
+      totalPrice += 15000 * days;
     }
     
-    // Ajouter le prix de l'assurance si l'option est sélectionnée
     if (data.insurance === "oui") {
-      totalPrice += 5000 * days; // 5 000 FCFA par jour pour l'assurance
+      totalPrice += 5000 * days;
     }
     
     return totalPrice;
   };
 
-  // Gestion de la soumission du formulaire
   const onSubmit = (data: z.infer<typeof formSchema>) => {
     const selectedVehicle = vehiclesData.find(v => v.id === data.vehicle);
     if (!selectedVehicle) return;
@@ -103,7 +94,6 @@ const VehicleReservation = () => {
     const days = getDaysDifference(data.startDate, data.endDate);
     const totalPrice = calculateTotalPrice(data);
     
-    // Création de l'objet de données de réservation
     const reservationSummary = {
       ...data,
       vehicleName: selectedVehicle.name,
@@ -120,7 +110,6 @@ const VehicleReservation = () => {
     setShowSummary(true);
   };
 
-  // Confirmation finale de la réservation
   const confirmReservation = () => {
     toast.success("Votre demande de réservation a été envoyée avec succès !");
     setShowSummary(false);
@@ -144,14 +133,13 @@ const VehicleReservation = () => {
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Sélection du véhicule */}
                     <FormField
                       control={form.control}
                       name="vehicle"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Véhicule</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value} id="vehicle-select">
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue placeholder="Sélectionnez un véhicule" />
@@ -170,7 +158,6 @@ const VehicleReservation = () => {
                       )}
                     />
 
-                    {/* Date de début */}
                     <FormField
                       control={form.control}
                       name="startDate"
@@ -212,7 +199,6 @@ const VehicleReservation = () => {
                       )}
                     />
 
-                    {/* Date de fin */}
                     <FormField
                       control={form.control}
                       name="endDate"
@@ -256,7 +242,6 @@ const VehicleReservation = () => {
                       )}
                     />
 
-                    {/* Nom complet */}
                     <FormField
                       control={form.control}
                       name="fullName"
@@ -271,7 +256,6 @@ const VehicleReservation = () => {
                       )}
                     />
 
-                    {/* Email */}
                     <FormField
                       control={form.control}
                       name="email"
@@ -286,7 +270,6 @@ const VehicleReservation = () => {
                       )}
                     />
 
-                    {/* Téléphone */}
                     <FormField
                       control={form.control}
                       name="phone"
@@ -302,11 +285,9 @@ const VehicleReservation = () => {
                     />
                   </div>
 
-                  {/* Options supplémentaires */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t">
                     <h3 className="text-lg font-medium col-span-full">Options supplémentaires</h3>
                     
-                    {/* Option chauffeur */}
                     <FormField
                       control={form.control}
                       name="withDriver"
@@ -329,7 +310,6 @@ const VehicleReservation = () => {
                       )}
                     />
 
-                    {/* Option assurance */}
                     <FormField
                       control={form.control}
                       name="insurance"
