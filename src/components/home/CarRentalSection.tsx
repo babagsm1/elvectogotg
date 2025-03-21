@@ -21,7 +21,7 @@ const CarRentalSection = () => {
           <AnimatedSection>
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="/lovable-uploads/fd32ce98-bc15-4647-b1ee-60c4b33e951c.png" 
+                src="/lovable-uploads/31ef3437-a258-48f6-a44e-8d29811cdd31.png" 
                 alt="Location de voitures avec chauffeur" 
                 className="w-full h-auto"
               />
@@ -68,7 +68,7 @@ const CarRentalSection = () => {
               </ul>
               
               <div className="mt-8">
-                <Link to="/services">
+                <Link to="/vehicules">
                   <Button>
                     Réserver une voiture
                   </Button>

@@ -10,7 +10,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay" 
         style={{ 
-          backgroundImage: `url('/lovable-uploads/3aaad69c-814d-462a-ab01-06627373c60d.png')` 
+          backgroundImage: `url('/lovable-uploads/6ce3882b-f19e-4f88-854d-c9593c980999.png')` 
         }}
       ></div>
       
@@ -33,9 +33,9 @@ const Hero = () => {
                 Nos Services
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/vehicules">
               <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent border-white text-white hover:bg-white/10">
-                Contactez-nous
+                Nos Véhicules
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

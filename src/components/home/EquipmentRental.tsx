@@ -59,7 +59,7 @@ const EquipmentRental = () => {
             <AnimatedSection animationType="slide-right">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/b0b5b198-37ad-4d34-bee4-11b451fc3baf.png" 
+                  src="/lovable-uploads/ade690af-5162-4fb8-81bc-ad73019fb184.png" 
                   alt="Engin de chantier" 
                   className="rounded-lg shadow-lg w-full object-cover"
                 />

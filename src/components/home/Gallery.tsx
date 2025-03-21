@@ -12,23 +12,23 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      title: 'Tranchée des câbles',
-      image: '/lovable-uploads/3aaad69c-814d-462a-ab01-06627373c60d.png'
+      title: 'Excavation',
+      image: '/lovable-uploads/927e3e2f-78de-4d2f-bc51-d1c8b2c86097.png'
     },
     {
       id: 2,
-      title: 'Manutention',
-      image: '/lovable-uploads/b0b5b198-37ad-4d34-bee4-11b451fc3baf.png'
+      title: 'Chargement',
+      image: '/lovable-uploads/05fa4f3f-2c06-4f1d-a27e-1a4fb67c91db.png'
     },
     {
       id: 3,
-      title: 'Fondation',
-      image: '/lovable-uploads/fd32ce98-bc15-4647-b1ee-60c4b33e951c.png'
+      title: 'Transport',
+      image: '/lovable-uploads/abab7d43-9e2b-4f00-921d-6f15529eaecf.png'
     },
     {
       id: 4,
-      title: 'Terrassement',
-      image: '/lovable-uploads/49979eec-46cf-4088-accc-e6efe6aad1df.png'
+      title: 'Construction',
+      image: '/lovable-uploads/bc9d7ea3-8f4b-46de-837c-e7d964d150cf.png'
     }
   ];
 

@@ -8,25 +8,25 @@ const PopularVehicles = () => {
   const popularVehicles = [
     {
       name: 'Toyota Corolla',
-      image: '/lovable-uploads/13acb3a4-4d2b-421b-8e6d-478f9122ef67.png',
+      image: '/lovable-uploads/31ef3437-a258-48f6-a44e-8d29811cdd31.png',
       description: 'Fiable, économique, idéale pour les professionnels.',
       features: ['Consommation réduite', 'Entretien facile', 'Climatisation', 'Bluetooth']
     },
     {
       name: 'Hyundai Accent',
-      image: '/lovable-uploads/bc5ed72f-f751-490b-88b9-48c64f6fa3ac.png',
+      image: '/lovable-uploads/4c07d363-cd42-4ef0-9948-c3fe2cbcd359.png',
       description: 'Parfaite pour les trajets urbains à Lomé.',
       features: ['Maniable en ville', 'Économique', 'Confortable', 'Fiable']
     },
     {
       name: 'Toyota RAV4',
-      image: '/lovable-uploads/c8fb8643-31fc-45dc-9614-1f524c33c251.png',
+      image: '/lovable-uploads/49104564-f560-4560-8c3d-4c2d46d84aa3.png',
       description: 'SUV pratique pour les familles et routes difficiles.',
       features: ['Spacieux', 'Polyvalent', 'Sécuritaire', 'Robuste']
     },
     {
       name: 'Toyota Hiace',
-      image: '/lovable-uploads/316acab7-c2b2-49c4-8df2-5a2dc5e26718.png',
+      image: '/lovable-uploads/6d8c68a9-4769-4665-8e2f-98ecf681d23b.png',
       description: 'Minibus idéal pour les groupes ou événements.',
       features: ['Grande capacité', 'Confortable', 'Climatisé', 'Spacieux']
     }

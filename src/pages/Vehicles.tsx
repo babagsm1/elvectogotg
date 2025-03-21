@@ -6,8 +6,13 @@ import PopularVehicles from '../components/vehicles/PopularVehicles';
 import ClientReviews from '../components/vehicles/ClientReviews';
 import HeroSection from '../components/vehicles/HeroSection';
 import { Toaster } from 'sonner';
+import { useEffect } from 'react';
 
 const Vehicles = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <Toaster />

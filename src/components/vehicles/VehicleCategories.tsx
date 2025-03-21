@@ -11,7 +11,7 @@ const professionalVehicles = [
   {
     id: 'corolla',
     name: 'Toyota Corolla',
-    image: '/lovable-uploads/13acb3a4-4d2b-421b-8e6d-478f9122ef67.png',
+    image: '/lovable-uploads/31ef3437-a258-48f6-a44e-8d29811cdd31.png',
     year: 2022,
     capacity: '5 personnes',
     consumption: '6,5L/100km',
@@ -22,7 +22,7 @@ const professionalVehicles = [
   {
     id: 'accent',
     name: 'Hyundai Accent',
-    image: '/lovable-uploads/bc5ed72f-f751-490b-88b9-48c64f6fa3ac.png',
+    image: '/lovable-uploads/4c07d363-cd42-4ef0-9948-c3fe2cbcd359.png',
     year: 2021,
     capacity: '5 personnes',
     consumption: '6L/100km',
@@ -36,7 +36,7 @@ const personalVehicles = [
   {
     id: 'rav4',
     name: 'Toyota RAV4',
-    image: '/lovable-uploads/c8fb8643-31fc-45dc-9614-1f524c33c251.png',
+    image: '/lovable-uploads/49104564-f560-4560-8c3d-4c2d46d84aa3.png',
     year: 2023,
     capacity: '5 personnes',
     consumption: '7,5L/100km',
@@ -47,7 +47,7 @@ const personalVehicles = [
   {
     id: 'berline',
     name: 'Mercedes Classe C',
-    image: '/lovable-uploads/5bfcb2f5-6d2c-4163-ae35-9f65defdfd4e.png',
+    image: '/lovable-uploads/d6261855-11fb-4198-b48e-3ca5f711151a.png',
     year: 2022,
     capacity: '5 personnes',
     consumption: '7L/100km',
@@ -61,7 +61,7 @@ const specialVehicles = [
   {
     id: 'hiace',
     name: 'Toyota Hiace',
-    image: '/lovable-uploads/316acab7-c2b2-49c4-8df2-5a2dc5e26718.png',
+    image: '/lovable-uploads/6d8c68a9-4769-4665-8e2f-98ecf681d23b.png',
     year: 2021,
     capacity: '12 personnes',
     consumption: '9L/100km',
@@ -72,7 +72,7 @@ const specialVehicles = [
   {
     id: 'camry',
     name: 'Toyota Camry',
-    image: '/lovable-uploads/93b75f76-66b8-4cba-a284-6d6f97559d7e.png',
+    image: '/lovable-uploads/4d8144cc-aca2-4b6a-a99d-269b62f7a9d7.png',
     year: 2023,
     capacity: '5 personnes',
     consumption: '7L/100km',
