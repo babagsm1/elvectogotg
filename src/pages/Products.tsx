@@ -1,5 +1,5 @@
 
-import { Truck, Shield, Award, Tool, CheckCircle2 } from 'lucide-react';
+import { Truck, Shield, Award, Wrench, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import SectionTitle from '../components/common/SectionTitle';
@@ -207,7 +207,7 @@ const Products = () => {
             <AnimatedSection delay={200} animationType="slide-up">
               <div className="bg-white p-6 rounded-lg shadow-md text-center h-full border-t-4 border-elvec-600">
                 <div className="bg-elvec-50 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Tool className="h-8 w-8 text-elvec-600" />
+                  <Wrench className="h-8 w-8 text-elvec-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-elvec-900">Maintenance régulière</h3>
                 <p className="text-gray-600">Tous nos équipements sont entretenus régulièrement pour garantir leur bon fonctionnement et leur longévité.</p>

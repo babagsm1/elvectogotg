@@ -9,40 +9,48 @@ import { Link } from 'react-router-dom';
 const PopularVehicles = () => {
   const popularVehicles = [
     {
-      id: 1,
+      id: '1',
       name: 'Toyota Corolla',
-      category: 'Berline',
+      category: 'professional',
       description: 'Idéale pour les déplacements professionnels en ville, fiable et économique.',
-      price: 40000, // Prix par jour en FCFA
+      pricePerDay: 40000,
       image: '/lovable-uploads/88be6baf-5d76-4716-a490-0e7d088f52c1.png',
-      features: ['5 places', 'Climatisation', 'Bluetooth', 'Consommation : 6L/100km'],
+      year: 2022,
+      capacity: '5 personnes',
+      consumption: '6L/100km',
     },
     {
-      id: 2,
+      id: '2',
       name: 'Hyundai Accent',
-      category: 'Berline',
+      category: 'professional',
       description: 'Confortable et économique, parfaite pour tous vos déplacements urbains.',
-      price: 35000, // Prix par jour en FCFA
+      pricePerDay: 35000,
       image: '/lovable-uploads/75348329-b44b-4869-92a9-c4c86585eae2.png',
-      features: ['5 places', 'Climatisation', 'Radio USB', 'Consommation : 5.5L/100km'],
+      year: 2021,
+      capacity: '5 personnes',
+      consumption: '5.5L/100km',
     },
     {
-      id: 3,
+      id: '3',
       name: 'Toyota RAV4',
-      category: 'SUV',
+      category: 'personal',
       description: 'SUV polyvalent idéal pour les routes difficiles et les déplacements en famille.',
-      price: 60000, // Prix par jour en FCFA
+      pricePerDay: 60000,
       image: '/lovable-uploads/a66d0727-cac4-4424-ad2b-1703cc5faf65.png',
-      features: ['5 places', 'Climatisation', 'GPS intégré', 'Consommation : 7.5L/100km'],
+      year: 2023,
+      capacity: '5 personnes',
+      consumption: '7.5L/100km',
     },
     {
-      id: 4,
+      id: '4',
       name: 'Toyota Hiace',
-      category: 'Minibus',
+      category: 'special',
       description: 'Parfait pour les groupes et les événements spéciaux, spacieux et confortable.',
-      price: 80000, // Prix par jour en FCFA
+      pricePerDay: 80000,
       image: '/lovable-uploads/88be6baf-5d76-4716-a490-0e7d088f52c1.png',
-      features: ['12 places', 'Climatisation', 'Radio', 'Consommation : 9L/100km'],
+      year: 2021,
+      capacity: '12 personnes',
+      consumption: '9L/100km',
     }
   ];
 
