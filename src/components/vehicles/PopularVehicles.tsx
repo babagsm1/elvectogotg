@@ -1,34 +1,48 @@
 
-import { Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import SectionTitle from '../common/SectionTitle';
+import VehicleCard from './VehicleCard';
+import Button from '../common/Button';
 import AnimatedSection from '../animations/AnimatedSection';
+import { Link } from 'react-router-dom';
 
 const PopularVehicles = () => {
-  // Données des véhicules populaires
   const popularVehicles = [
     {
+      id: 1,
       name: 'Toyota Corolla',
-      image: '/lovable-uploads/31ef3437-a258-48f6-a44e-8d29811cdd31.png',
-      description: 'Fiable, économique, idéale pour les professionnels.',
-      features: ['Consommation réduite', 'Entretien facile', 'Climatisation', 'Bluetooth']
+      category: 'Berline',
+      description: 'Idéale pour les déplacements professionnels en ville, fiable et économique.',
+      price: 40000, // Prix par jour en FCFA
+      image: '/lovable-uploads/88be6baf-5d76-4716-a490-0e7d088f52c1.png',
+      features: ['5 places', 'Climatisation', 'Bluetooth', 'Consommation : 6L/100km'],
     },
     {
+      id: 2,
       name: 'Hyundai Accent',
-      image: '/lovable-uploads/4c07d363-cd42-4ef0-9948-c3fe2cbcd359.png',
-      description: 'Parfaite pour les trajets urbains à Lomé.',
-      features: ['Maniable en ville', 'Économique', 'Confortable', 'Fiable']
+      category: 'Berline',
+      description: 'Confortable et économique, parfaite pour tous vos déplacements urbains.',
+      price: 35000, // Prix par jour en FCFA
+      image: '/lovable-uploads/75348329-b44b-4869-92a9-c4c86585eae2.png',
+      features: ['5 places', 'Climatisation', 'Radio USB', 'Consommation : 5.5L/100km'],
     },
     {
+      id: 3,
       name: 'Toyota RAV4',
-      image: '/lovable-uploads/49104564-f560-4560-8c3d-4c2d46d84aa3.png',
-      description: 'SUV pratique pour les familles et routes difficiles.',
-      features: ['Spacieux', 'Polyvalent', 'Sécuritaire', 'Robuste']
+      category: 'SUV',
+      description: 'SUV polyvalent idéal pour les routes difficiles et les déplacements en famille.',
+      price: 60000, // Prix par jour en FCFA
+      image: '/lovable-uploads/a66d0727-cac4-4424-ad2b-1703cc5faf65.png',
+      features: ['5 places', 'Climatisation', 'GPS intégré', 'Consommation : 7.5L/100km'],
     },
     {
+      id: 4,
       name: 'Toyota Hiace',
-      image: '/lovable-uploads/6d8c68a9-4769-4665-8e2f-98ecf681d23b.png',
-      description: 'Minibus idéal pour les groupes ou événements.',
-      features: ['Grande capacité', 'Confortable', 'Climatisé', 'Spacieux']
+      category: 'Minibus',
+      description: 'Parfait pour les groupes et les événements spéciaux, spacieux et confortable.',
+      price: 80000, // Prix par jour en FCFA
+      image: '/lovable-uploads/88be6baf-5d76-4716-a490-0e7d088f52c1.png',
+      features: ['12 places', 'Climatisation', 'Radio', 'Consommation : 9L/100km'],
     }
   ];
 
@@ -37,54 +51,25 @@ const PopularVehicles = () => {
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <SectionTitle 
-            title="Véhicules populaires à Lomé" 
-            subtitle="Découvrez les véhicules les plus demandés par nos clients à Lomé"
+            title="Nos Véhicules Populaires" 
+            subtitle="Découvrez notre sélection de véhicules les plus demandés à Lomé"
             centered
           />
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {popularVehicles.map((vehicle, index) => (
-            <AnimatedSection key={vehicle.name} delay={index * 100}>
-              <div className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="md:w-2/5">
-                  <img 
-                    src={vehicle.image} 
-                    alt={vehicle.name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="md:w-3/5 p-6">
-                  <div className="flex items-center mb-2">
-                    <h3 className="text-xl font-bold">{vehicle.name}</h3>
-                    <div className="ml-auto flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-current text-yellow-500" />
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-4">{vehicle.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-2">
-                    {vehicle.features.map((feature, i) => (
-                      <div key={i} className="flex items-center">
-                        <div className="w-2 h-2 bg-elvec-600 rounded-full mr-2"></div>
-                        <span className="text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <a 
-                    href="#reservation" 
-                    className="inline-block mt-4 text-elvec-600 font-medium hover:text-elvec-800 hover:underline"
-                  >
-                    Réserver maintenant →
-                  </a>
-                </div>
-              </div>
-            </AnimatedSection>
+            <VehicleCard key={vehicle.id} vehicle={vehicle} index={index} />
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link to="/contact">
+            <Button variant="primary" className="inline-flex items-center">
+              Voir tous nos véhicules
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

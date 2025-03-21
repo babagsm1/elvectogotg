@@ -103,7 +103,7 @@ const Services = () => {
             <AnimatedSection>
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/b0b5b198-37ad-4d34-bee4-11b451fc3baf.png" 
+                  src="/lovable-uploads/d821c0ba-bf70-4f75-8546-dbc64980905b.png" 
                   alt="Engin de chantier" 
                   className="rounded-lg shadow-lg w-full object-cover"
                 />
@@ -208,7 +208,7 @@ const Services = () => {
             
             <AnimatedSection className="order-1 lg:order-2" animationType="slide-right">
               <img 
-                src="/lovable-uploads/fd32ce98-bc15-4647-b1ee-60c4b33e951c.png" 
+                src="/lovable-uploads/cc256fb8-05f3-4982-bdb2-6413414b3db1.png" 
                 alt="Location de voitures avec chauffeur" 
                 className="rounded-lg shadow-lg w-full object-cover"
               />

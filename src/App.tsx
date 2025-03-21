@@ -12,6 +12,7 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Vehicles from "./pages/Vehicles";
+import Products from "./pages/Products";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/a-propos" element={<AboutUs />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/produits" element={<Products />} />
             <Route path="/galerie" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/vehicules" element={<Vehicles />} />

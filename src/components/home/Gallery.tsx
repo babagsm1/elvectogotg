@@ -13,22 +13,22 @@ const Gallery = () => {
     {
       id: 1,
       title: 'Excavation',
-      image: '/lovable-uploads/927e3e2f-78de-4d2f-bc51-d1c8b2c86097.png'
+      image: '/lovable-uploads/f7ba1d62-eae3-4d1d-be31-64d8282a9c53.png'
     },
     {
       id: 2,
-      title: 'Chargement',
-      image: '/lovable-uploads/05fa4f3f-2c06-4f1d-a27e-1a4fb67c91db.png'
+      title: 'Compactage',
+      image: '/lovable-uploads/cd214fd5-039b-401a-900b-c2b1eee28e32.png'
     },
     {
       id: 3,
       title: 'Transport',
-      image: '/lovable-uploads/abab7d43-9e2b-4f00-921d-6f15529eaecf.png'
+      image: '/lovable-uploads/cc256fb8-05f3-4982-bdb2-6413414b3db1.png'
     },
     {
       id: 4,
       title: 'Construction',
-      image: '/lovable-uploads/bc9d7ea3-8f4b-46de-837c-e7d964d150cf.png'
+      image: '/lovable-uploads/d821c0ba-bf70-4f75-8546-dbc64980905b.png'
     }
   ];
 
@@ -86,3 +86,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

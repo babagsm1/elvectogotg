@@ -29,6 +29,7 @@ const Navbar = () => {
     { path: '/a-propos', label: 'À Propos' },
     { path: '/services', label: 'Services' },
     { path: '/produits', label: 'Produits' },
+    { path: '/vehicules', label: 'Véhicules' },
     { path: '/galerie', label: 'Galerie' },
     { path: '/contact', label: 'Contact' },
   ];
@@ -73,7 +74,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex-shrink-0">
               <span className="flex items-center">
-                <img src="/lovable-uploads/be68f8ac-818b-4b8a-ac6a-6f693ecd76b5.png" alt="ELVEC-TOGO" className="h-12 w-auto" />
+                <img src="/lovable-uploads/fa46f65b-f983-4a81-b8cc-895c85f987b3.png" alt="ELVEC-TOGO" className="h-12 w-auto" />
                 <span className="ml-2 font-display font-bold text-elvec-900 text-xl md:text-2xl">ELVEC <span className="text-elvec-600">TOGO</span></span>
               </span>
             </Link>

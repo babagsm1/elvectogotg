@@ -7,71 +7,71 @@ import AnimatedSection from '../components/animations/AnimatedSection';
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   
-  // Images pour la galerie
+  // Images pour la galerie avec les nouvelles images
   const galleryItems = [
     {
       id: 1,
-      title: 'Tranchée des câbles',
-      category: 'tranchee',
-      image: '/lovable-uploads/3aaad69c-814d-462a-ab01-06627373c60d.png'
+      title: 'Excavation',
+      category: 'excavation',
+      image: '/lovable-uploads/f7ba1d62-eae3-4d1d-be31-64d8282a9c53.png'
     },
     {
       id: 2,
-      title: 'Manutention',
-      category: 'manutention',
-      image: '/lovable-uploads/b0b5b198-37ad-4d34-bee4-11b451fc3baf.png'
+      title: 'Compactage',
+      category: 'compactage',
+      image: '/lovable-uploads/cd214fd5-039b-401a-900b-c2b1eee28e32.png'
     },
     {
       id: 3,
-      title: 'Fondation',
-      category: 'fondation',
-      image: '/lovable-uploads/fd32ce98-bc15-4647-b1ee-60c4b33e951c.png'
+      title: 'Chargement',
+      category: 'chargement',
+      image: '/lovable-uploads/cc256fb8-05f3-4982-bdb2-6413414b3db1.png'
     },
     {
       id: 4,
       title: 'Terrassement',
       category: 'terrassement',
-      image: '/lovable-uploads/49979eec-46cf-4088-accc-e6efe6aad1df.png'
+      image: '/lovable-uploads/d821c0ba-bf70-4f75-8546-dbc64980905b.png'
     },
     {
       id: 5,
-      title: 'Rétention d\'eau',
-      category: 'retention',
-      image: '/lovable-uploads/3aaad69c-814d-462a-ab01-06627373c60d.png'
+      title: 'Construction',
+      category: 'construction',
+      image: '/lovable-uploads/0879026f-0ebf-429d-b447-6ee256248b60.png'
     },
     {
       id: 6,
-      title: 'Aménagement',
-      category: 'amenagement',
-      image: '/lovable-uploads/b0b5b198-37ad-4d34-bee4-11b451fc3baf.png'
+      title: 'Terrassement',
+      category: 'terrassement',
+      image: '/lovable-uploads/1bd720bd-9635-455f-8849-f89512705c25.png'
     },
     {
       id: 7,
-      title: 'Terrassement 2',
-      category: 'terrassement',
-      image: '/lovable-uploads/fd32ce98-bc15-4647-b1ee-60c4b33e951c.png'
+      title: 'Transport',
+      category: 'transport',
+      image: '/lovable-uploads/5849e000-e611-4774-9d9e-c823996b8d14.png'
     },
     {
       id: 8,
-      title: 'Dessouchage',
-      category: 'dessouchage',
-      image: '/lovable-uploads/49979eec-46cf-4088-accc-e6efe6aad1df.png'
+      title: 'Levage',
+      category: 'levage',
+      image: '/lovable-uploads/75348329-b44b-4869-92a9-c4c86585eae2.png'
     },
     {
       id: 9,
-      title: 'Reprofilage',
-      category: 'reprofilage',
-      image: '/lovable-uploads/3aaad69c-814d-462a-ab01-06627373c60d.png'
+      title: 'Transport lourd',
+      category: 'transport',
+      image: '/lovable-uploads/a66d0727-cac4-4424-ad2b-1703cc5faf65.png'
     }
   ];
   
   const categories = [
     { id: 'all', name: 'Tous' },
-    { id: 'tranchee', name: 'Tranchée' },
-    { id: 'manutention', name: 'Manutention' },
-    { id: 'fondation', name: 'Fondation' },
+    { id: 'excavation', name: 'Excavation' },
+    { id: 'compactage', name: 'Compactage' },
+    { id: 'chargement', name: 'Chargement' },
     { id: 'terrassement', name: 'Terrassement' },
-    { id: 'amenagement', name: 'Aménagement' }
+    { id: 'transport', name: 'Transport' }
   ];
   
   const filteredItems = selectedCategory === 'all' 
@@ -98,7 +98,7 @@ const Gallery = () => {
           <AnimatedSection>
             <SectionTitle 
               title="Galerie De Nos Réalisations" 
-              subtitle="Rencontrez les membres clés de notre équipe."
+              subtitle="Découvrez notre expertise à travers nos différents projets."
               centered
             />
             

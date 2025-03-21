@@ -10,7 +10,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay" 
         style={{ 
-          backgroundImage: `url('/lovable-uploads/6ce3882b-f19e-4f88-854d-c9593c980999.png')` 
+          backgroundImage: `url('/lovable-uploads/0879026f-0ebf-429d-b447-6ee256248b60.png')` 
         }}
       ></div>
       
@@ -50,3 +50,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

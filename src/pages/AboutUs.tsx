@@ -14,22 +14,22 @@ const AboutUs = () => {
     {
       name: 'M. AZIABLE KOSSI',
       position: 'Directeur Général',
-      image: '/lovable-uploads/49979eec-46cf-4088-accc-e6efe6aad1df.png'
+      image: '/lovable-uploads/88be6baf-5d76-4716-a490-0e7d088f52c1.png'
     },
     {
       name: 'M. Soglom Amah Denis',
       position: 'Responsable matériel',
-      image: '/lovable-uploads/49979eec-46cf-4088-accc-e6efe6aad1df.png'
+      image: '/lovable-uploads/75348329-b44b-4869-92a9-c4c86585eae2.png'
     },
     {
       name: 'Mme AZIABLE ADJO',
       position: 'Secrétaire',
-      image: '/lovable-uploads/49979eec-46cf-4088-accc-e6efe6aad1df.png'
+      image: '/lovable-uploads/a66d0727-cac4-4424-ad2b-1703cc5faf65.png'
     },
     {
       name: 'M. APEMAGNON PASCAL',
       position: 'Comptable Gestionnaire',
-      image: '/lovable-uploads/49979eec-46cf-4088-accc-e6efe6aad1df.png'
+      image: '/lovable-uploads/88be6baf-5d76-4716-a490-0e7d088f52c1.png'
     }
   ];
   
@@ -72,7 +72,7 @@ const AboutUs = () => {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <AnimatedSection className="w-full lg:w-1/2">
               <img 
-                src="/lovable-uploads/b0b5b198-37ad-4d34-bee4-11b451fc3baf.png" 
+                src="/lovable-uploads/5849e000-e611-4774-9d9e-c823996b8d14.png" 
                 alt="À propos d'ELVEC TOGO" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
