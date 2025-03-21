@@ -20,7 +20,7 @@ const Services = () => {
     },
     {
       title: 'Piste Rurale',
-      description: 'Nous réalisons la construction et l'entretien de pistes rurales pour améliorer l'accès aux zones reculées.',
+      description: 'Nous réalisons la construction et l\'entretien de pistes rurales pour améliorer l\'accès aux zones reculées.',
       icon: Road
     },
     {
