@@ -1,5 +1,5 @@
 
-import { Bulldozer, Hammer, Road, Truck, Building, HardHat, Car, Clock, CheckCircle2 } from 'lucide-react';
+import { Tractor, Hammer, Wrench, Truck, Building, HardHat, Car, Clock, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import SectionTitle from '../components/common/SectionTitle';
@@ -13,7 +13,7 @@ const Services = () => {
     {
       title: 'Terrassement',
       description: 'Nous offrons des services de terrassement pour préparer votre terrain pour la construction.',
-      icon: Bulldozer
+      icon: Tractor
     },
     {
       title: 'Démolition',
@@ -23,7 +23,7 @@ const Services = () => {
     {
       title: 'Piste Rurale',
       description: 'Nous réalisons la construction et l\'entretien de pistes rurales pour améliorer l\'accès aux zones reculées.',
-      icon: Road
+      icon: Wrench
     },
     {
       title: 'Ponceaux',

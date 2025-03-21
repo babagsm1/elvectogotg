@@ -1,8 +1,7 @@
-
 import { useState } from 'react';
 import { Mail, Phone, User, MessageSquare } from 'lucide-react';
 import Button from './Button';
-import { toast } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
