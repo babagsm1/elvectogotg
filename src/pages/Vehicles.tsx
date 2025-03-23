@@ -10,9 +10,11 @@ import ReviewDialog from '../components/vehicles/ReviewDialog';
 import { Toaster } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { MessageSquare } from 'lucide-react';
+import RequestQuoteDialog from '../components/common/RequestQuoteDialog';
 
 const Vehicles = () => {
   const [reviewOpen, setReviewOpen] = useState(false);
+  const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,7 +26,7 @@ const Vehicles = () => {
       <HeroSection />
       <VehicleCategories />
       <PopularVehicles />
-      <VehicleReservation />
+      <VehicleReservation quoteDialogOpen={quoteDialogOpen} setQuoteDialogOpen={setQuoteDialogOpen} />
       <ClientReviews />
       
       <div className="fixed bottom-6 right-6 z-50">
@@ -39,6 +41,7 @@ const Vehicles = () => {
       </div>
       
       <ReviewDialog open={reviewOpen} onOpenChange={setReviewOpen} />
+      <RequestQuoteDialog open={quoteDialogOpen} onOpenChange={setQuoteDialogOpen} />
     </Layout>
   );
 };

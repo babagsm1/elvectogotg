@@ -1,10 +1,14 @@
 
+import { useState } from 'react';
 import { ArrowRight, PhoneCall } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../common/Button';
 import AnimatedSection from '../animations/AnimatedSection';
+import RequestQuoteDialog from '../common/RequestQuoteDialog';
 
 const CtaSection = () => {
+  const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
+
   return (
     <section className="py-20 bg-gradient-to-r from-elvec-900 to-elvec-800 text-white">
       <div className="container mx-auto px-4">
@@ -18,15 +22,14 @@ const CtaSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact">
-                <Button 
-                  className="bg-white text-elvec-800 hover:bg-gray-100 w-full sm:w-auto"
-                  size="lg"
-                >
-                  Demander un devis
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+              <Button 
+                className="bg-white text-elvec-800 hover:bg-gray-100 w-full sm:w-auto"
+                size="lg"
+                onClick={() => setQuoteDialogOpen(true)}
+              >
+                Demander un devis
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
               <a href="tel:+22870600306">
                 <Button 
                   variant="outline" 
@@ -41,6 +44,11 @@ const CtaSection = () => {
           </AnimatedSection>
         </div>
       </div>
+      
+      <RequestQuoteDialog 
+        open={quoteDialogOpen} 
+        onOpenChange={setQuoteDialogOpen} 
+      />
     </section>
   );
 };

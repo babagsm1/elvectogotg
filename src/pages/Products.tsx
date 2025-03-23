@@ -1,12 +1,15 @@
-
+import { useState } from 'react';
 import { Truck, Shield, Award, Wrench, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import SectionTitle from '../components/common/SectionTitle';
 import Button from '../components/common/Button';
 import AnimatedSection from '../components/animations/AnimatedSection';
+import RequestQuoteDialog from '../components/common/RequestQuoteDialog';
 
 const Products = () => {
+  const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
+
   // Liste des produits principaux
   const mainProducts = [
     {
@@ -60,11 +63,12 @@ const Products = () => {
                 Découvrez notre gamme complète d'engins de chantier et d'équipements professionnels
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/contact">
-                  <Button className="bg-white text-elvec-800 hover:bg-gray-100">
-                    Demander un devis
-                  </Button>
-                </Link>
+                <Button 
+                  className="bg-white text-elvec-800 hover:bg-gray-100"
+                  onClick={() => setQuoteDialogOpen(true)}
+                >
+                  Demander un devis
+                </Button>
                 <Link to="/services">
                   <Button variant="outline" className="border-white text-white hover:bg-white/10">
                     Nos services
@@ -250,11 +254,12 @@ const Products = () => {
                   Contactez-nous dès aujourd'hui pour bénéficier de nos offres spéciales et obtenir un devis personnalisé.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                  <Link to="/contact">
-                    <Button className="bg-white text-elvec-800 hover:bg-gray-100 w-full sm:w-auto">
-                      Contactez-nous
-                    </Button>
-                  </Link>
+                  <Button 
+                    className="bg-white text-elvec-800 hover:bg-gray-100 w-full sm:w-auto"
+                    onClick={() => setQuoteDialogOpen(true)}
+                  >
+                    Contactez-nous
+                  </Button>
                   <Link to="/services">
                     <Button variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
                       Découvrir nos services
@@ -284,6 +289,11 @@ const Products = () => {
           </div>
         </div>
       </section>
+
+      <RequestQuoteDialog 
+        open={quoteDialogOpen} 
+        onOpenChange={setQuoteDialogOpen} 
+      />
     </Layout>
   );
 };
