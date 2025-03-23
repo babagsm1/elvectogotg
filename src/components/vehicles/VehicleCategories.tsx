@@ -29,6 +29,28 @@ const professionalVehicles = [
     pricePerDay: 32000,
     description: 'Parfaite pour les trajets urbains, confortable et économique.',
     category: 'professional'
+  },
+  {
+    id: 'yaris',
+    name: 'Toyota Yaris',
+    image: '/lovable-uploads/31ef3437-a258-48f6-a44e-8d29811cdd31.png',
+    year: 2023,
+    capacity: '5 personnes',
+    consumption: '5,8L/100km',
+    pricePerDay: 30000,
+    description: 'Compacte et agile, parfaite pour la circulation en ville à Lomé.',
+    category: 'professional'
+  },
+  {
+    id: 'santafe',
+    name: 'Hyundai Santa Fe',
+    image: '/lovable-uploads/4c07d363-cd42-4ef0-9948-c3fe2cbcd359.png',
+    year: 2022,
+    capacity: '7 personnes',
+    consumption: '8L/100km',
+    pricePerDay: 45000,
+    description: 'SUV familial spacieux, idéal pour les déplacements professionnels en groupe.',
+    category: 'professional'
   }
 ];
 
@@ -54,6 +76,28 @@ const personalVehicles = [
     pricePerDay: 60000,
     description: 'Berline de luxe pour vos déplacements en toute élégance.',
     category: 'personal'
+  },
+  {
+    id: 'land-cruiser',
+    name: 'Toyota Land Cruiser Prado',
+    image: '/lovable-uploads/49104564-f560-4560-8c3d-4c2d46d84aa3.png',
+    year: 2023,
+    capacity: '7 personnes',
+    consumption: '9L/100km',
+    pricePerDay: 70000,
+    description: 'SUV de luxe tout-terrain, parfait pour explorer les régions autour de Lomé.',
+    category: 'personal'
+  },
+  {
+    id: 'highlander',
+    name: 'Toyota Highlander',
+    image: '/lovable-uploads/d6261855-11fb-4198-b48e-3ca5f711151a.png',
+    year: 2022,
+    capacity: '7 personnes',
+    consumption: '8,5L/100km',
+    pricePerDay: 65000,
+    description: 'Véhicule familial spacieux avec tout le confort nécessaire pour vos voyages.',
+    category: 'personal'
   }
 ];
 
@@ -78,6 +122,28 @@ const specialVehicles = [
     consumption: '7L/100km',
     pricePerDay: 55000,
     description: 'Voiture de prestige pour mariages, cérémonies et événements spéciaux.',
+    category: 'special'
+  },
+  {
+    id: 'coaster',
+    name: 'Toyota Coaster',
+    image: '/lovable-uploads/6d8c68a9-4769-4665-8e2f-98ecf681d23b.png',
+    year: 2022,
+    capacity: '30 personnes',
+    consumption: '12L/100km',
+    pricePerDay: 120000,
+    description: 'Autobus pour grands groupes, idéal pour les transferts d\'aéroport ou excursions.',
+    category: 'special'
+  },
+  {
+    id: 'lexus',
+    name: 'Lexus ES 350',
+    image: '/lovable-uploads/4d8144cc-aca2-4b6a-a99d-269b62f7a9d7.png',
+    year: 2023,
+    capacity: '5 personnes',
+    consumption: '8L/100km',
+    pricePerDay: 80000,
+    description: 'Berline de luxe pour vos déplacements VIP, mariages et occasions spéciales.',
     category: 'special'
   }
 ];

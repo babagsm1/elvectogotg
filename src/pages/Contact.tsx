@@ -5,10 +5,17 @@ import SectionTitle from '../components/common/SectionTitle';
 import ContactForm from '../components/common/ContactForm';
 import AnimatedSection from '../components/animations/AnimatedSection';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Toaster } from 'sonner';
+import { useEffect } from 'react';
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
+      <Toaster />
       <div className="bg-gradient-to-r from-elvec-900 to-elvec-800 text-white py-16">
         <div className="container mx-auto px-4">
           <AnimatedSection>
@@ -23,7 +30,7 @@ const Contact = () => {
               <p className="text-xl text-gray-300 mb-6">
                 N'hésitez pas à nous contacter pour toute question ou demande de devis. Notre équipe est disponible pour vous répondre rapidement.
               </p>
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="tel:+22870600306" className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full">
                   <Phone className="h-4 w-4 mr-2" />
                   +228 70 60 03 06
@@ -197,22 +204,6 @@ const Contact = () => {
               </AnimatedSection>
             </TabsContent>
           </Tabs>
-        </div>
-      </section>
-      
-      <section className="py-10 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="rounded-lg overflow-hidden shadow-lg h-96">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31767.789057610985!2d1.1464791!3d6.1731309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e1c113185cf1%3A0x8898cc09bc6ebb4e!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sfr!2s!4v1650464744985!5m2!1sfr!2s" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              title="ELVEC-TOGO location"
-            ></iframe>
-          </div>
         </div>
       </section>
     </Layout>

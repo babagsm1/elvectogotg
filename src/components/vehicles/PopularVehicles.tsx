@@ -51,7 +51,29 @@ const PopularVehicles = () => {
       year: 2021,
       capacity: '12 personnes',
       consumption: '9L/100km',
-    }
+    },
+    {
+      id: '5',
+      name: 'Mercedes Classe C',
+      category: 'personal',
+      description: 'Berline de luxe pour vos déplacements VIP en toute élégance dans Lomé.',
+      pricePerDay: 65000,
+      image: '/lovable-uploads/75348329-b44b-4869-92a9-c4c86585eae2.png',
+      year: 2022,
+      capacity: '5 personnes',
+      consumption: '7L/100km',
+    },
+    {
+      id: '6',
+      name: 'Toyota Land Cruiser',
+      category: 'personal',
+      description: 'SUV robuste pour explorer les environs de Lomé et les pistes difficiles.',
+      pricePerDay: 90000,
+      image: '/lovable-uploads/a66d0727-cac4-4424-ad2b-1703cc5faf65.png',
+      year: 2023,
+      capacity: '7 personnes',
+      consumption: '10L/100km',
+    },
   ];
 
   return (
@@ -65,14 +87,14 @@ const PopularVehicles = () => {
           />
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {popularVehicles.map((vehicle) => (
             <VehicleCard key={vehicle.id} vehicle={vehicle} />
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/contact">
+          <Link to="/vehicules">
             <Button variant="primary" className="inline-flex items-center">
               Voir tous nos véhicules
               <ArrowRight className="ml-2 h-5 w-5" />

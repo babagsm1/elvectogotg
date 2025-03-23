@@ -18,8 +18,8 @@ const Vehicles = () => {
       <Toaster />
       <HeroSection />
       <VehicleCategories />
-      <VehicleReservation />
       <PopularVehicles />
+      <VehicleReservation />
       <ClientReviews />
     </Layout>
   );
