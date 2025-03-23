@@ -66,8 +66,8 @@ const PopularVehicles = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {popularVehicles.map((vehicle, index) => (
-            <VehicleCard key={vehicle.id} vehicle={vehicle} index={index} />
+          {popularVehicles.map((vehicle) => (
+            <VehicleCard key={vehicle.id} vehicle={vehicle} />
           ))}
         </div>
 

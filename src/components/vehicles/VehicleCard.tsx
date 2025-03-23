@@ -1,11 +1,10 @@
 
 import { useState } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, Users, Fuel, Info } from 'lucide-react';
-import Button from '../common/Button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Star, Calendar, Users, Fuel } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import AnimatedSection from '../animations/AnimatedSection';
 
-interface VehicleProps {
+export interface VehicleProps {
   vehicle: {
     id: string;
     name: string;
@@ -20,83 +19,75 @@ interface VehicleProps {
 }
 
 const VehicleCard = ({ vehicle }: VehicleProps) => {
-  const [showDetails, setShowDetails] = useState(false);
-
-  // Format du prix avec séparateur de milliers
-  const formattedPrice = vehicle.pricePerDay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-
+  const [isHovered, setIsHovered] = useState(false);
+  
+  const formatPrice = (price: number) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  };
+  
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-      <div className="relative h-60 overflow-hidden">
-        <img
-          src={vehicle.image}
-          alt={vehicle.name}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-        />
-        <div className="absolute top-0 right-0 bg-elvec-600 text-white px-3 py-1 text-sm font-medium">
-          {vehicle.category === 'professional' ? 'Professionnel' : 
-           vehicle.category === 'personal' ? 'Particulier' : 'Spécial'}
+    <AnimatedSection>
+      <div 
+        className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 h-full flex flex-col"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="relative">
+          <img 
+            src={vehicle.image} 
+            alt={vehicle.name} 
+            className={cn(
+              "w-full h-48 object-cover transition-transform duration-500",
+              isHovered && "scale-105"
+            )}
+          />
+          <div className="absolute top-0 right-0 bg-elvec-600 text-white text-xs px-2 py-1 m-2 rounded">
+            {vehicle.category === 'professional' && 'Professionnel'}
+            {vehicle.category === 'personal' && 'Personnel'}
+            {vehicle.category === 'special' && 'Spécial'}
+          </div>
+        </div>
+        
+        <div className="p-5 flex-grow flex flex-col">
+          <div className="flex justify-between items-start mb-2">
+            <h3 className="text-xl font-bold text-elvec-900">{vehicle.name}</h3>
+            <div className="flex items-center">
+              <span className="text-yellow-500 flex">
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+              </span>
+            </div>
+          </div>
+          
+          <p className="text-gray-600 text-sm mb-4 flex-grow">{vehicle.description}</p>
+          
+          <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
+            <div className="flex items-center text-gray-600">
+              <Calendar className="h-4 w-4 mr-1 text-elvec-500" />
+              <span>{vehicle.year}</span>
+            </div>
+            <div className="flex items-center text-gray-600">
+              <Users className="h-4 w-4 mr-1 text-elvec-500" />
+              <span>{vehicle.capacity}</span>
+            </div>
+            <div className="flex items-center text-gray-600 col-span-2">
+              <Fuel className="h-4 w-4 mr-1 text-elvec-500" />
+              <span>{vehicle.consumption}</span>
+            </div>
+          </div>
+          
+          <div className="flex justify-between items-center mt-auto pt-3 border-t border-gray-100">
+            <span className="text-elvec-900 font-bold">{formatPrice(vehicle.pricePerDay)} FCFA<span className="text-xs text-gray-500 font-normal">/jour</span></span>
+            <button className="bg-elvec-600 hover:bg-elvec-700 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300">
+              Réserver
+            </button>
+          </div>
         </div>
       </div>
-      
-      <CardHeader>
-        <div className="flex justify-between items-center">
-          <CardTitle>{vehicle.name}</CardTitle>
-          <div className="text-elvec-600 font-bold">{formattedPrice} FCFA<span className="text-sm font-normal text-gray-500">/jour</span></div>
-        </div>
-        <CardDescription>Année {vehicle.year}</CardDescription>
-      </CardHeader>
-      
-      <CardContent>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="flex items-center text-sm">
-            <Users className="mr-2 h-4 w-4 text-elvec-600" />
-            <span>{vehicle.capacity}</span>
-          </div>
-          <div className="flex items-center text-sm">
-            <Fuel className="mr-2 h-4 w-4 text-elvec-600" />
-            <span>{vehicle.consumption}</span>
-          </div>
-        </div>
-        
-        <p className="mt-4 text-sm text-gray-600">{vehicle.description}</p>
-      </CardContent>
-      
-      <CardFooter className="flex justify-between border-t pt-4">
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button variant="outline" size="sm" className="flex items-center">
-              <Info className="mr-1 h-4 w-4" /> Détails
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent>
-            <div className="space-y-2">
-              <h4 className="font-bold">Caractéristiques:</h4>
-              <ul className="text-sm space-y-1">
-                <li>• Air conditionné</li>
-                <li>• Système audio Bluetooth</li>
-                <li>• Kilométrage illimité</li>
-                <li>• Assurance incluse</li>
-              </ul>
-              <p className="text-sm mt-2">Chauffeur disponible avec supplément</p>
-            </div>
-          </PopoverContent>
-        </Popover>
-        
-        <a href="#reservation" 
-          onClick={() => {
-            const reservationSelect = document.getElementById('vehicle-select');
-            if (reservationSelect) {
-              (reservationSelect as HTMLSelectElement).value = vehicle.id;
-            }
-          }}
-        >
-          <Button className="flex items-center">
-            <Calendar className="mr-1 h-4 w-4" /> Réserver
-          </Button>
-        </a>
-      </CardFooter>
-    </Card>
+    </AnimatedSection>
   );
 };
 

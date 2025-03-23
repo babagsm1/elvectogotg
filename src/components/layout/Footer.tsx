@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
@@ -12,8 +11,7 @@ const Footer = () => {
           {/* Logo and Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src="/lovable-uploads/be68f8ac-818b-4b8a-ac6a-6f693ecd76b5.png" alt="ELVEC-TOGO" className="h-12 w-auto mr-2" />
-              <span className="font-display font-bold text-xl">ELVEC <span className="text-elvec-400">TOGO</span></span>
+              <img src="/lovable-uploads/2b8380f1-7282-4343-a0a8-40704b599087.png" alt="ELVEC-TOGO" className="h-16 w-auto mr-2" />
             </div>
             <p className="text-gray-300 text-sm mt-2">
               Votre partenaire de confiance en matériel de construction et équipements agricoles
