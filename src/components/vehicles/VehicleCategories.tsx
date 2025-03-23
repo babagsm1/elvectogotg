@@ -11,7 +11,7 @@ const professionalVehicles = [
   {
     id: 'corolla',
     name: 'Toyota Corolla',
-    image: '/lovable-uploads/1bd720bd-9635-455f-8849-f89512705c25.png',
+    image: 'https://images.unsplash.com/photo-1628277613967-6abca504d0ac?q=80&w=2070&auto=format&fit=crop',
     year: 2022,
     capacity: '5 personnes',
     consumption: '6,5L/100km',
@@ -22,7 +22,7 @@ const professionalVehicles = [
   {
     id: 'accent',
     name: 'Hyundai Accent',
-    image: '/lovable-uploads/4626bded-4c99-437a-9422-17d3088248d2.png',
+    image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=2064&auto=format&fit=crop',
     year: 2021,
     capacity: '5 personnes',
     consumption: '6L/100km',
@@ -33,7 +33,7 @@ const professionalVehicles = [
   {
     id: 'yaris',
     name: 'Toyota Yaris',
-    image: '/lovable-uploads/b0b5b198-37ad-4d34-bee4-11b451fc3baf.png',
+    image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=2036&auto=format&fit=crop',
     year: 2023,
     capacity: '5 personnes',
     consumption: '5,8L/100km',
@@ -44,7 +44,7 @@ const professionalVehicles = [
   {
     id: 'santafe',
     name: 'Hyundai Santa Fe',
-    image: '/lovable-uploads/cc256fb8-05f3-4982-bdb2-6413414b3db1.png',
+    image: 'https://images.unsplash.com/photo-1633957897986-70e83293f3ff?q=80&w=2060&auto=format&fit=crop',
     year: 2022,
     capacity: '7 personnes',
     consumption: '8L/100km',
@@ -58,7 +58,7 @@ const personalVehicles = [
   {
     id: 'rav4',
     name: 'Toyota RAV4',
-    image: '/lovable-uploads/ade690af-5162-4fb8-81bc-ad73019fb184.png',
+    image: 'https://images.unsplash.com/photo-1581540222194-0def2dda95b8?q=80&w=2067&auto=format&fit=crop',
     year: 2023,
     capacity: '5 personnes',
     consumption: '7,5L/100km',
@@ -69,7 +69,7 @@ const personalVehicles = [
   {
     id: 'berline',
     name: 'Mercedes Classe C',
-    image: '/lovable-uploads/be68f8ac-818b-4b8a-ac6a-6f693ecd76b5.png',
+    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2070&auto=format&fit=crop',
     year: 2022,
     capacity: '5 personnes',
     consumption: '7L/100km',
@@ -80,7 +80,7 @@ const personalVehicles = [
   {
     id: 'land-cruiser',
     name: 'Toyota Land Cruiser Prado',
-    image: '/lovable-uploads/2b8380f1-7282-4343-a0a8-40704b599087.png',
+    image: 'https://images.unsplash.com/photo-1625595234377-0458f8a282a3?q=80&w=2071&auto=format&fit=crop',
     year: 2023,
     capacity: '7 personnes',
     consumption: '9L/100km',
@@ -91,7 +91,7 @@ const personalVehicles = [
   {
     id: 'highlander',
     name: 'Toyota Highlander',
-    image: '/lovable-uploads/d821c0ba-bf70-4f75-8546-dbc64980905b.png',
+    image: 'https://images.unsplash.com/photo-1675747312933-94410c152364?q=80&w=2069&auto=format&fit=crop',
     year: 2022,
     capacity: '7 personnes',
     consumption: '8,5L/100km',
@@ -105,7 +105,7 @@ const specialVehicles = [
   {
     id: 'hiace',
     name: 'Toyota Hiace',
-    image: '/lovable-uploads/5849e000-e611-4774-9d9e-c823996b8d14.png',
+    image: 'https://images.unsplash.com/photo-1614106764087-719038e91211?q=80&w=2070&auto=format&fit=crop',
     year: 2021,
     capacity: '12 personnes',
     consumption: '9L/100km',
@@ -116,7 +116,7 @@ const specialVehicles = [
   {
     id: 'camry',
     name: 'Toyota Camry',
-    image: '/lovable-uploads/fa46f65b-f983-4a81-b8cc-895c85f987b3.png',
+    image: 'https://images.unsplash.com/photo-1621007690695-36e794710604?q=80&w=2070&auto=format&fit=crop',
     year: 2023,
     capacity: '5 personnes',
     consumption: '7L/100km',
@@ -127,7 +127,7 @@ const specialVehicles = [
   {
     id: 'coaster',
     name: 'Toyota Coaster',
-    image: '/lovable-uploads/fd32ce98-bc15-4647-b1ee-60c4b33e951c.png',
+    image: 'https://images.unsplash.com/photo-1650457053023-66b67305c00f?q=80&w=2070&auto=format&fit=crop',
     year: 2022,
     capacity: '30 personnes',
     consumption: '12L/100km',
@@ -138,7 +138,7 @@ const specialVehicles = [
   {
     id: 'lexus',
     name: 'Lexus ES 350',
-    image: '/lovable-uploads/be68f8ac-818b-4b8a-ac6a-6f693ecd76b5.png',
+    image: 'https://images.unsplash.com/photo-1549399542-7e8f2e928464?q=80&w=2031&auto=format&fit=crop',
     year: 2023,
     capacity: '5 personnes',
     consumption: '8L/100km',
