@@ -65,7 +65,7 @@ const VehicleReservation = ({ quoteDialogOpen, setQuoteDialogOpen }: VehicleRese
             <div className="relative hidden lg:block">
               <div 
                 className="absolute inset-0 bg-cover bg-center" 
-                style={{ backgroundImage: `url('/lovable-uploads/be68f8ac-818b-4b8a-ac6a-6f693ecd76b5.png')` }}
+                style={{ backgroundImage: `url('/lovable-uploads/b98648ec-2fca-4e83-b746-d48ad9686764.png')` }}
               >
                 <div className="absolute inset-0 bg-black/20"></div>
               </div>
