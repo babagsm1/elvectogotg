@@ -4,6 +4,8 @@ import { Mail, Phone, User, MessageSquare } from 'lucide-react';
 import Button from './Button';
 import { toast } from "sonner";
 import VoiceRecorder from './VoiceRecorder';
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -73,14 +75,14 @@ const ContactForm = () => {
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <User className="h-5 w-5 text-gray-400" />
           </div>
-          <input
+          <Input
             type="text"
             id="nom"
             name="nom"
             value={formData.nom}
             onChange={handleChange}
             required
-            className="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-elvec-500 focus:border-elvec-500 block w-full pl-10 p-2.5"
+            className="pl-10"
             placeholder="Votre nom"
           />
         </div>
@@ -94,13 +96,13 @@ const ContactForm = () => {
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <Mail className="h-5 w-5 text-gray-400" />
           </div>
-          <input
+          <Input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-elvec-500 focus:border-elvec-500 block w-full pl-10 p-2.5"
+            className="pl-10"
             placeholder="votre@email.com"
           />
         </div>
@@ -114,14 +116,14 @@ const ContactForm = () => {
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <Phone className="h-5 w-5 text-gray-400" />
           </div>
-          <input
+          <Input
             type="tel"
             id="telephone"
             name="telephone"
             value={formData.telephone}
             onChange={handleChange}
             required
-            className="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-elvec-500 focus:border-elvec-500 block w-full pl-10 p-2.5"
+            className="pl-10"
             placeholder="+228 XX XX XX XX"
           />
         </div>
@@ -135,15 +137,15 @@ const ContactForm = () => {
           <div className="absolute top-3 left-3 pointer-events-none">
             <MessageSquare className="h-5 w-5 text-gray-400" />
           </div>
-          <textarea
+          <Textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
             rows={4}
-            className="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-elvec-500 focus:border-elvec-500 block w-full pl-10 p-2.5"
+            className="pl-10"
             placeholder="Votre message (ou utilisez l'option d'enregistrement audio ci-dessous)"
-          ></textarea>
+          />
         </div>
       </div>
       
